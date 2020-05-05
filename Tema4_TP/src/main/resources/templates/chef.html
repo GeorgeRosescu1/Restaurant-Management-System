@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Chef</title>
+        </head>
+        <body>
+            <h1>Chef Interface</h1>
+            <a href="/">Back</a>
+
+
+            <form action="#" method="post" th:object="${chef}">
+                <label><br><br> <span th:text="*{state}"></span></label>
+                <div>
+                    <input type="submit" value="Cook Order" name="cook"/>
+                    <br>
+                    <input type="submit" value="Done!" name="done"/>
+                </div>
+            </form>
+
+        </body>
+    </html>

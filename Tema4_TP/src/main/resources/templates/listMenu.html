@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+    <html lang="en">
+        <style>
+            table {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <h1>Menu Items</h1>
+            <a href="/admin_operations">Back</a>
+
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price in RON</th>
+                </tr>
+
+                <tr th:each="baseProduct : ${menItems.getMenuItems()}">
+                    <td th:text="${baseProduct.productName}"></td>
+                    <td th:text="${baseProduct.productPrice}"></td>
+                </tr>
+
+            </table>
+        </body>
+    </html>

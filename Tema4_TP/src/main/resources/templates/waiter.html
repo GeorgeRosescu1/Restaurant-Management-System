@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" xmlns:background="http://www.w3.org/1999/xhtml"
+      xmlns:width="http://www.w3.org/1999/xhtml">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+    <html lang="en">
+
+        <style>
+            .menuItems {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+            }
+        </style>
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Waiter</title>
+        </head>
+        <body>
+            <h1>Waiter Interface</h1>
+            <a href="/">Back</a>
+            <form action="#" method="post" th:object="${order}">
+                <p>Table Number<br> <input th:field="*{table}" type="text" placeholder="0"/></p>
+                <p>Date<br> <input th:field="*{date}" type="text" placeholder="dd.mm.yyyy"/></p>
+                <p>Product Name<br> <input th:field="*{product}" type="text" placeholder="Cartofi Prajiti"/></p>
+                <div>
+                    <br>
+                    <span th:text="${error}" style="color: red"></span>
+                    <br>
+                    <br>
+                    <input type="submit" value="Create Order" name="create"/>
+                    <a href="listMenu" class="menuItems">Show Menu</a>
+                </div>
+            </form>
+
+        </body>
+    </html>

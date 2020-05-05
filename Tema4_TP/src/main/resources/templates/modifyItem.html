@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html xmlns:th="http://www.thymeleaf.org">
+        <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <h1>Modify Menu Item</h1>
+            <a href="/admin_operations">Back</a>
+
+
+            <form action="#" method="post" th:object="${baseProductModify}">
+                <div>
+                <p>Old Name<br> <input th:field="*{oldName}" type="text" placeholder="Cartofi Prajiti"/></p>
+                <p>Old Price<br> <input th:field="*{oldPrice}" type="text" placeholder="12.78"/></p>
+                <p>New Name<br> <input th:field="*{newName}" type="text" placeholder="Cartofi Prajiti"/></p>
+                <p>New Price<br> <input th:field="*{newPrice}" type="text" placeholder="12.78"/></p>
+                <div>
+                    <br>
+                    <br>
+                    <input type="submit" value="Modify Product" name="modify"/>
+                </div>
+            </form>
+
+        </body>
+    </html>

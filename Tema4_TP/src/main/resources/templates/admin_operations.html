@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html xmlns:th="http://www.thymeleaf.org">
+        <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+        <style>
+            .menuItems{
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+            }
+        </style>
+        <head>
+            <meta charset="UTF-8">
+            <title>Admin Operations</title>
+        </head>
+        <body>
+            <h1>Choose Operation</h1>
+            <a href="/">Back</a>
+
+            <div>
+                <a href="addItem" class="addItem">Add Menu Item</a>
+                <br>
+                <a href="deleteItem" class="deleteItem">Delete Menu Item</a>
+                <br>
+                <a href="modifyItem" class="modifyItem">Modify Menu Item</a>
+                <br>
+                <a href="listMenu" class="menuItems">List Menu Items</a>
+            </div>
+
+        </body>
+    </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html xmlns:th="http://www.thymeleaf.org">
+        <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+        </head>
+        <body>
+            <h1>Delete Menu Item</h1>
+            <a href="/admin_operations">Back</a>
+
+            <form action="#" method="post" th:object="${baseProduct}">
+                <p>Item To Be Deleted Name<br> <input th:field="*{productName}" type="text" placeholder="Cartofi Prajiti"/></p>
+                <div>
+                    <br>
+                    <br>
+                    <input type="submit" value="Delete Item" name="delete"/>
+                </div>
+            </form>
+
+        </body>
+    </html>
